@@ -57,7 +57,7 @@ export default function AboutMe() {
                   target="__blank"
                   className="border-b-2 border-gray-300 font-bold text-gray-300"
                 >
-                  Resume
+                  resume
                 </a>{" "}
                 and I'd love to work for you.
               </p>
