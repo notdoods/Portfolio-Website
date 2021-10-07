@@ -20,7 +20,7 @@ const userData = {
   ],
   about: {
     title:
-      "I'm a software developer that loves building products and web applications that impact millions of lives",
+      "I'm a software developer that loves building life changing products and beautifully designed website applications",
     description: [
       `I started developing as an undergraduate at the University of California, Irvine in 2015 
       with a major in Computer Game Science. During my studies at UCI, I've studied various sectors of computer science, 
@@ -81,7 +81,7 @@ const userData = {
   socialLinks: {
     linkedin: "https://linkedin.com/in/kevin-chao-3b2562130",
     github: "https://github.com/notdoods",
-    facebook: "https://facebook.com/",
+    facebook: "https://www.facebook.com/TheGeneralAutoInsurance/",
   },
 };
 

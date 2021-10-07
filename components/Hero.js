@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="header_hero bg-gradient-to-b from-gray-900 via-blue-800 animate-gradient-y relative z-10 overflow-hidden lg:flex items-center">
+    <div
+      className="header_hero bg-gradient-to-b from-gray-900 via-blue-800 
+    animate-gradient-y relative z-10 overflow-hidden lg:flex items-center flex"
+    >
       <div className="container">
         <div className="row">
           <div className="w-full lg:w-1/2">

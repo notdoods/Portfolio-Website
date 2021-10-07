@@ -50,14 +50,14 @@ export default function AboutMe() {
                 Job Opportunities
               </h1>
               <p className="text-lg  mt-4 text-gray-300">
-                I'm looking for a job currently, If you see me as a good fit,
+                I'm looking for a job currently, if you see me as a good fit,
                 check my{" "}
                 <a
                   href={userData.resumeUrl}
                   target="__blank"
                   className="border-b-2 border-gray-300 font-bold text-gray-300"
                 >
-                  CV
+                  Resume
                 </a>{" "}
                 and I'd love to work for you.
               </p>
