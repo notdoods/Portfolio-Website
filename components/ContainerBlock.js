@@ -9,7 +9,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
 
   const meta = {
     title: "Kevin Chao - Programmer and Web Developer",
-    description: "Back End and Front End, Let's touch bases to know more",
+    description:
+      "Back End or Front End, I can get comfortable with either. Contact me to catch up ",
     type: "website",
     ...customMeta,
   };
