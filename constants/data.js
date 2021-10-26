@@ -10,7 +10,7 @@ const userData = {
     {
       title: "Portfolio Website",
       link: "https://www.kevinhchao.com/",
-      imgUrl: "/portfolio-project.png",
+      imgUrl: "/portfolio-project.PNG",
     },
     {
       title: "Sunstone Innovation - Qmmunity",
