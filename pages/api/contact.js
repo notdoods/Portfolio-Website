@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import userData from "../../constants/data";
 
-export default function (req, res) {
+export default async (req, res) => {
   require("dotenv").config();
 
   let nodemailer = require("nodemailer");
@@ -9,13 +9,8 @@ export default function (req, res) {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      //type: "OAuth2",
       user: "kevinchaoburner@gmail.com",
       pass: process.env.EMAIL_PASSWORD,
-      //clientID: process.env.CLIENT_ID,
-      //clientSecret: process.env.CLIENT_SECRET,
-      //refreshToken: process.env.REFRESH_TOKEN,
-      //accessToken: process.env.ACCESS_TOKEN,
     },
     secure: true,
   });
@@ -28,10 +23,13 @@ export default function (req, res) {
     html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`,
   };
 
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else {
-      console.log(info);
-    }
+  await new Promise((res, err) => {
+    transporter.sendMail(mailData, function (err, info) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(info);
+      }
+    });
   });
-}
+};
