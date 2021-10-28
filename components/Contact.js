@@ -1,7 +1,29 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import userData from "../constants/data";
 
-export default function Experience() {
+export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let data = { name, email, message };
+    axios
+      .post("/api/contact", data)
+      .then((res) => {
+        if (res.status === 200) {
+          setName("");
+          setEmail("");
+          setMessage("Your Email has been sent!");
+        }
+      })
+      .catch((error) => {
+        alert("Email Failed");
+      });
+  };
   return (
     <section className="bg-gray-800">
       <div className="max-w-6xl mx-auto h-48 antialiased">
@@ -79,6 +101,10 @@ export default function Experience() {
               </label>
               <input
                 type="text"
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
                 className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
                 name="name"
               />
@@ -87,6 +113,10 @@ export default function Experience() {
               </label>
               <input
                 type="text"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
                 name="email"
               />
@@ -99,11 +129,18 @@ export default function Experience() {
               <textarea
                 rows="4"
                 type="text"
+                value={message}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
                 className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
                 name="message"
               ></textarea>
               <button
                 type="submit"
+                onClick={(e) => {
+                  handleSubmit(e);
+                }}
                 className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
               >
                 Send Message
