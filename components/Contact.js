@@ -1,29 +1,37 @@
 import axios from "axios";
 import React, { useState } from "react";
 import userData from "../constants/data";
+import handleValidation from "../lib/handleValidation";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    let isValidForm = handleValidation(name, email, message);
+
     let data = { name, email, message };
-    axios
-      .post("/api/contact", data)
-      .then((res) => {
-        if (res.status === 200) {
-          setName("");
-          setEmail("");
-          setMessage("Your Email has been sent!");
-        }
-      })
-      .catch((error) => {
-        alert("Email Failed");
-      });
+    if (isValidForm) {
+      const res = await axios
+        .post("/api/contact", data)
+        .then((res) => {
+          if (res.status === 200) {
+            setName("");
+            setEmail("");
+            setMessage("Your Email has been sent!");
+          }
+        })
+        .catch((error) => {
+          alert("Email Failed");
+        });
+    } else {
+      alert("Email Failed! Be sure to fill in name, email, and message.");
+    }
   };
+
   return (
     <section className="bg-gray-800">
       <div className="max-w-6xl mx-auto h-48 antialiased">
