@@ -10,7 +10,6 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     let isValidForm = handleValidation(name, email, message);
 
     let data = { name, email, message };
@@ -25,11 +24,14 @@ export default function Contact() {
           }
         })
         .catch((error) => {
-          alert("Email Failed, and I was here.");
+          alert("Email Failed");
         });
     } else {
-      alert("Email Failed! Be sure to fill in name, email, and message.");
+      alert(
+        "Email Failed! Be sure to fill in name, email (with proper @ address), and message."
+      );
     }
+    return;
   };
 
   return (
