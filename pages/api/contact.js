@@ -13,12 +13,12 @@ async function sendEmail(req, res) {
       subject: `Message from: ${req.body.name}`,
       html: `
       <h3>Received a message from: ${req.body.email}</h3>
-      <br/>
+      <br>
       <p>Message: </p>
       <p>${req.body.message}</p>`,
     });
   } catch (error) {
-    console.log(error.status);
+    console.log("Ya caught me.");
     return res.status(error.status || 500).json({ error: error.message });
   }
   return res.status(200).json({ error: "" });
