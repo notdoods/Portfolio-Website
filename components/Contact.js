@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import userData from "../constants/data";
-import handleValidation from "../lib/handleValidation";
+import { handleValidation } from "../lib/handleValidation";
 
 export default function Contact() {
   const [name, setName] = useState("");
