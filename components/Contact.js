@@ -15,21 +15,12 @@ export default function Contact() {
 
     let data = { name, email, message };
     if (isValidForm) {
-      const res = await axios
-        .post("/api/contact", data)
-        .then((res) => {
-          if (res.status === 200) {
-            setName("");
-            setEmail("");
-            setMessage("Your Email has been sent!");
-          }
-        })
-        .catch((error) => {
-          alert("Email Failed");
-        });
+      const res = await axios.post("/api/contact", data);
     } else {
       alert("Email Failed! Be sure to fill in name, email, and message.");
     }
+
+    const { }
   };
 
   return (
