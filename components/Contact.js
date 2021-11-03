@@ -151,7 +151,7 @@ export default function Contact() {
                 onClick={(e) => {
                   handleSubmit(e);
                 }}
-                className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
+                className="bg-blue-500 hover:bg-blue-700 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
               >
                 Send Message
               </button>
