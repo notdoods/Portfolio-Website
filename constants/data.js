@@ -36,7 +36,7 @@ const userData = {
       I have some experience in other technologies like Ubuntu 20.04 on WSL, Tableau, Firebase, and 
       Joomla.`,
     ],
-    currentProject: "Nothing at the moment, just smaller projects",
+    currentProject: "Issue Tracker through Flask",
     currentProjectUrl: "https://kevinhchao.com",
   },
   experience: [
