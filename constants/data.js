@@ -17,6 +17,11 @@ const userData = {
       link: "https://www.businesswire.com/news/home/20210408005933/en/Winning-Startups-Receive-25000-through-Sunstone-Innovation-Challenge-at-CSULB",
       imgUrl: "/qmmunity-project.png",
     },
+    {
+      title: "Cryptocurrency Observer Discord Bot",
+      link: "https://github.com/notdoods/Grypto-Bot",
+      imgUrl: "/grypto.png",
+    },
   ],
   about: {
     title:
@@ -32,9 +37,9 @@ const userData = {
       as a student web and applications developer for CSULB's Associated Student, Inc.`,
 
       `On the front-end, I've been coding in React, Node.js, Nextjs, PHP, MySQL, and Bootstrap. 
-      As for back-end, I use Python, Jupyter Notebook, Java, C#, and C++. In addition to programming, 
-      I have some experience in other technologies like Ubuntu 20.04 on WSL, Tableau, Firebase, and 
-      Joomla.`,
+      As for back-end, I use Python, Java, C#, and C++. In addition to programming, 
+      I have some experience in other technologies like Ubuntu 20.04 on WSL, Jupyter Notebook, 
+      Tableau, Firebase, and Joomla.`,
     ],
     currentProject: "Issue Tracker through Flask",
     currentProjectUrl: "https://kevinhchao.com",
@@ -67,6 +72,13 @@ const userData = {
       year: "Sept. 2019 - Mar. 2020",
       companyLink: "https://esports.uci.edu",
       desc: "Worked in front desk, assisting customers in the usage of UCI Esports Arena computer and its system. Maintained both hardware and software while creatively troubleshooting issues.",
+    },
+    {
+      title: "Event Coordinator",
+      company: "Melee @ UCI",
+      year: "Nov. 2017 - June 2019",
+      companyLink: "https://www.facebook.com/groups/meleeUCI",
+      desc: "Communicated with venues and team to host video game tournaments throughout the year. Enforced rules and ran events in a timely, smooth manner by thorough planning, teamwork, and leadership skills.",
     },
     {
       title: "Computer Game Science Undergraduate",
