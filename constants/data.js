@@ -20,7 +20,7 @@ const userData = {
     {
       title: "Cryptocurrency Observer Discord Bot",
       link: "https://github.com/notdoods/Grypto-Bot",
-      imgUrl: "/grypto.png",
+      imgUrl: "/grypto.PNG",
     },
   ],
   about: {
